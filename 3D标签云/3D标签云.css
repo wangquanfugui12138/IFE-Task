@@ -1,0 +1,23 @@
+body{
+    background:linear-gradient(135deg ,#fff,#f5f5f5) no-repeat;
+    background:-webkit-linear-gradient(135deg ,#fff,#000) ;
+}
+.tag_cloud{
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+.tag_cloud a{
+    display: block;
+    position: absolute;
+    text-decoration: none;
+    color: #000;
+    left: 0;
+    font-family: "Î¢ÈíÑÅºÚ";
+    top: 0;
+    font-weight: bold;
+}
+.tag_cloud a:hover{
+    filter: brightness(150%);
+}

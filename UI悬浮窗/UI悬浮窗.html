@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="UI悬浮窗.css"/>
+    <title>UI悬浮窗</title>
+</head>
+<body>
+<menu type="context" id="mymenu">
+    <ul>
+        <li><strong>JavaScript 学习</strong></li>
+        <li>响应用户操作</li>
+        <li>事件驱动</li>
+        <li>元素属性操作</li>
+        <li>函数传参</li>
+        <li>JavaScript组成</li>
+        <li>JavaScript出现的位置、优缺点</li>
+        <li>变量、类型、变量作用域</li>
+        <li>闭包</li>
+        <li>运算符</li>
+        <li>程序流程控制</li>
+        <li>定时器的使用</li>
+    </ul>
+</menu>
+<div>
+    <button class="btn" onclick="PopUp()">弹出悬浮层</button>
+</div>
+<div class="mu" id="mu"></div>
+<div class="pop" id="pop">
+    <h1 id="bar">按住此处拖拽</h1>
+    <p>这是一个浮出层</p>
+    <a id="sure" href="javascript:close()">确定</a>
+    <a id="del" href="javascript:close()">取消</a>
+</div>
+</body>
+<script src="UI悬浮窗.js" charset="gbk"></script>
+</html>

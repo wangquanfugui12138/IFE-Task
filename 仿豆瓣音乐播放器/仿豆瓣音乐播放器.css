@@ -1,0 +1,165 @@
+.bg{
+    background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1493107986&di=d164cefb9595830f337bfe08ca37e5b5&imgtype=jpg&er=1&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F57e0d340722c4.jpg") ;
+    filter: blur(20px) brightness(50%);
+    opacity: .6;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+.main{
+    width: 800px;
+    height: 300px;
+    margin: 100px auto;
+    box-shadow: 0 4px 20px 2px silver;
+    background-color: #f5f5f5;
+}
+.left{
+    margin: 20px  0 0 20px;
+    float: left;
+    position: relative;
+    width: 500px;
+    height: 100%;
+}
+.install{
+    z-index: 1;
+    position: absolute;
+    right: 4%;
+    top: 32%;
+}
+.fa{
+    color: silver;
+    margin-left: 5px;
+}
+.fa:hover{
+    color: #0f0f0f;
+}
+#like:hover,#delete:hover{
+    animation: doudong 1s ease-in-out infinite;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+}
+.sound{
+    margin-left: 20px;
+    margin-top: -9px;
+}
+.sound_container{
+    width: 65px;
+    height: 4px;
+    cursor: pointer;
+    display: none;
+}
+#volume:hover .sound_container{
+    display: block;
+}
+.sound_bg{
+    background: #dadada;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.sound_bar{
+    background: #000;
+    height: 100%;
+    width: 50%;
+    transition: all 0.3s linear;
+}
+.progress{
+    position: relative;
+    font-size: 14px;
+}
+.pro_container{
+    width: 480px;
+    height: 10px;
+
+}
+.pro_bg{
+    background: silver;
+    height: 2px;
+    width: 100%;
+    margin-top: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.pro_bar{
+    background: white;
+    width: 0;
+    height: 100%;
+    display: none;
+}
+.pro_circle{
+    z-index: 2;
+    border: 4px solid white;
+    position: absolute;
+    border-radius: 50%;
+    top: -3px;
+    display: none;
+}
+.pro_bg:hover+.pro_circle{
+    display: block;
+}
+.play{
+    position: relative;
+    top: 15px;
+    font-size: 25px;
+}
+.play-left{
+    float: left;
+}
+.play-right{
+    position: absolute;
+    right: 3%;
+}
+.play-right>a{
+    width: 25px;
+    margin-left: 10px;
+}
+.right{
+    position: relative;
+    margin: 25px;
+    margin-left: 5px;
+    float: left;
+    width: 250px;
+    height: 250px;
+    border-radius:50% ;
+    overflow: hidden;
+}
+img{
+    width: 100%;
+    height: 100%;
+    animation: rotate 30s linear infinite;
+    animation-play-state: paused;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes doudong {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    10%, 20% {
+        -webkit-transform: scale(0.9) rotate(-3deg);
+    }
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale(1.1) rotate(3deg);
+    }
+    40%, 60%, 80% {
+        -webkit-transform: scale(1.1) rotate(-3deg);
+    }
+    100% {
+        -webkit-transform: scale(1) rotate(0deg);
+    }
+}
+
+

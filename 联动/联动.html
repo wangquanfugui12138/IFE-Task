@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="联动.css"/>
+    <title></title>
+</head>
+<body>
+    <div class="main">
+        <div class="foot">
+        <div class="type">
+            <input type="radio" name="type" id="unschool" value="stu" checked onchange="choose()"/>在校生
+        </div>
+        <div class="type">
+            <input type="radio" name="type" id="school" value="unstu" onchange="choose()"/>非在校生
+        </div>
+        </div>
+        <div class="content" id="sc">
+            <label for="address">学校</label>
+            <select id="address" onchange="AddToUn()">
+                <option id="a1">北京</option>
+                <option id="a2">上海</option>
+                <option id="a3">山东</option>
+            </select>
+            <select id="bjsn">
+                <option>北京大学</option>
+                <option selected>清华大学</option>
+            </select>
+            <select id="shsn">
+                <option selected>上海交通大学</option>
+                <option>复旦大学</option>
+            </select>
+            <select id="sdsn">
+                <option>青鸟</option>
+                <option selected>蓝翔</option>
+            </select>
+        </div>
+        <div class="content" id="unsc">
+            <label for="jobadd">就业地</label>
+            <input type="text" id="jobadd"/>
+        </div>
+    </div>
+</body>
+<script src="联动.js" charset="gbk"></script>
+</html>

@@ -1,0 +1,32 @@
+.container {
+    width: 40%;
+    margin: 50px auto;
+}
+.context{
+    text-align: center;
+    background-color: white;
+}
+.article{
+    height: 0;
+    margin-bottom: 5px;
+    overflow: hidden;
+    border:1px solid #ccc;
+    border-top: 0;
+}
+.article>div{
+    margin: 10px;
+}
+label{
+    background: #eee;
+    display: block;
+    line-height: 2;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+input[type='radio']{
+    display: none;
+}
+input:checked+.article{
+    height: 100px;
+    transition: .8s linear;
+}
