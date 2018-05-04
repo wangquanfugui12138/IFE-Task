@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <title>旋转</title>
+     <style>
+        .scene {
+            width: 300px;
+            height: 300px;
+            margin: 75px auto 0;
+            perspective: 300px;
+        }
+
+        .cube {
+            cursor: pointer;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            transform: translateZ(-300px);
+        }
+        .cube:hover{
+            animation: ro 5s infinite linear;
+        }
+        @keyframes ro{
+            from{transform:translateZ(-300px) rotateY(0deg)}
+            to{transform:translateZ(-300px) rotateY(360deg)}
+        }
+        .side {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border:2px solid black;
+        }
+        .back {
+            transform: translateZ(-150px) rotateX(180deg);
+        }
+        .top {
+            transform: translateY(-150px) rotateX(90deg);
+        }
+        .bottom {
+            transform: translateY(150px) rotateX(270deg);
+        }
+        .front {
+            transform: translateZ(150px);
+        }
+
+     </style>
+ </head>
+ <body>
+    <div class="scene">
+        <div class="cube">
+            <div class="side back"></div>
+            <div class="side top"></div>
+            <div class="side bottom"></div>
+            <div class="side front"></div>
+        </div>
+    </div>
+ </body>
+ </html>
