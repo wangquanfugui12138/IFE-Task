@@ -27,3 +27,5 @@
 * [饼状Loading图](https://wangquanfugui12138.github.io/IFE-Task/%E9%A5%BC%E7%8A%B6loading%E5%9B%BE/css%E9%A5%BC%E7%8A%B6Loading%E5%9B%BE.html)
 
 * [卡片翻转](https://wangquanfugui12138.github.io/IFE-Task/%E5%8D%A1%E7%89%87%E7%BF%BB%E8%BD%AC/%E5%8D%A1%E7%89%87%E7%BF%BB%E8%BD%AC.html)
+
+* [立方体中轴旋转](https://wangquanfugui12138.github.io/IFE-Task/%E4%B8%AD%E8%BD%B4%E6%97%8B%E8%BD%AC/%E4%B8%AD%E8%BD%B4%E6%97%8B%E8%BD%AC.html)
