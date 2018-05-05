@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>css-slide</title>
+    <style>
+        .wrapper{
+            overflow: hidden;
+            position: relative;
+            width: 720px;
+            height: 480px;
+            margin: 50px auto;
+        }
+        .content{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .content>img{
+            width: 100%;
+            height: 100%;
+        }
+        .point{
+            position: absolute;
+            width: 480px;
+            height: 60px;
+            top: 400px;
+            transform:translateX(25%)
+        }
+        .point>img{
+            cursor: pointer;
+            margin: 0 3px;
+            width: 90px;
+            height: 60px;
+        }
+        @keyframes translateX{
+            from{transform:translateX(-500px)}
+            to{transform:translateX(0)}
+        }
+        @keyframes translateY{
+            from{transform:translateY(350px)}
+            to{transform:translateX(0)}
+        }
+        @keyframes scale1{
+            from{transform:scale(.1)}
+            to{transform:scale(1)}
+        }
+        @keyframes scale2{
+            from{transform:scale(2)}
+            to{transform:scale(1)}
+        }
+        @keyframes mix{
+            from{transform:rotate(-360deg) scale(.1)}
+            to{transform:rotate(0) scale(1)}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <img src="imgs/bg0.jpg" alt="bg">
+        </div>
+        <div class="point">
+            
+        </div>
+    </div>
+    <script>
+        (function(){
+                let imgs=['imgs/bg0.jpg','imgs/bg1.jpg','imgs/bg2.jpg','imgs/bg3.jpg','imgs/bg4.jpg'],
+                imgLen=imgs.length,temp,
+                frag=document.createDocumentFragment(),
+                content=$('content').getElementsByTagName('img')[0];
+
+                function $(cName){
+                    return document.getElementsByClassName(cName)[0]
+                }
+
+                for(;imgLen>0;imgLen--){
+                    temp = document.createElement('img');
+                    temp.title=5-imgLen;
+                    temp.src=imgs[5-imgLen]
+                    frag.appendChild(temp);
+                }
+
+                $('point').appendChild(frag);
+                
+                $('point').addEventListener('click',e=>{
+                    content.style.animation?content.style.animation='':''; 
+                    if(e.target.tagName==='IMG') {
+                        switch (e.target.title){
+                            case '0':
+                                content.style.animation='translateX .5s ease-out'
+                                break;
+                            case '1':
+                                content.style.animation='translateY .5s ease-out'
+                                break;
+                            case '2':
+                                content.style.animation='scale1 1s ease-in'
+                                break;
+                            case '3':
+                                content.style.animation='scale2 1s ease-out'
+                                break;
+                            case '4':
+                                content.style.animation='mix .7s ease-in-out'
+                                break;
+                        }
+                        content.src=e.target.src;
+                    }
+                },false)
+            }
+        )();
+    </script>
+</body>
+</html>
